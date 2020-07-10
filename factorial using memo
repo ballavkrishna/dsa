@@ -1,0 +1,18 @@
+#dp
+#o(n)
+#memoisation
+
+t=int(input())
+while(t):
+    
+    
+    n=int(input())
+    f=[1]
+    try:
+        print(f[n])
+    
+    except:
+        for i in range(len(f),n+1):
+            f.append(i*f[i-1])
+    print(f[n])
+    t-=1
