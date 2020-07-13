@@ -1,3 +1,6 @@
+#https://leetcode.com/problems/maximum-subarray
+# https://www.youtube.com/watch?v=86CQq3pKSUw
+
 # bouns 
 # find all subarray in single line
 # k=[(L[i:i+j]) for i in range(0,len(L)) for j in range(1,len(L)-(i+1))]
