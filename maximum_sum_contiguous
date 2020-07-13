@@ -1,0 +1,19 @@
+# bouns 
+# find all subarray in single line
+# k=[(L[i:i+j]) for i in range(0,len(L)) for j in range(1,len(L)-(i+1))]
+# using this we will get T.C- > O(n^2)
+
+# T.C -> whooper o(n)
+#kadane algorithm
+# o(n)
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        k=[0]*len(nums)
+        k[0]=nums[0]
+        for i in range(1, len(nums)):
+        # store max till  that index by using max( cur number + max till prev index , current_element ) 
+            k[i]=max(nums[i]+k[i-1] , nums[i])
+        return max(k)
+            
+        
